@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Roboto Mono';
+  font-size: 18px;
+}
+
+#hero{
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/andrew-neel-jtsW--Z6bFw-unsplash.jpg') no-repeat center / cover;
+  color: white;
+}
+
+.container{
+  width: 90%;
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+}
+
+.container .info h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.container .info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.container .info p {
+  font-size: 1.2rem;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-right: 0;
+}
+
+.container .info a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 1rem; 
+  padding: 0.5em 2em;
+  margin-top: 1rem; 
+  color:  hsl(2, 69%, 49%);
+  
+} 
+
+.container a:hover {
+  background-color: hsl(2, 69%, 49%);
+  color: white;
+  transition: 0.3s;
+} 
+
+.red-txt{
+  color: hsl(2, 69%, 49%);
+}
+
+
+
+@media only screen and (max-width:768px){
+  html{
+    font-size:10px;
+  }
+}
