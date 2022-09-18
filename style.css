@@ -9,7 +9,10 @@
 html{
   font-family: 'Roboto Mono';
   font-size: 18px;
+  background-color: black;
 }
+
+
 
 #hero{
   height: 100vh;
@@ -48,18 +51,18 @@ html{
 .container .info a {
   text-decoration: none;
   display: inline-block;
-  background-color: white;
+  background-color: hsl(2, 69%, 49%);
   border-radius: 4px;
   font-size: 1rem; 
   padding: 0.5em 2em;
   margin-top: 1rem; 
-  color:  hsl(2, 69%, 49%);
+  color:  hsl(0, 0%, 0%);
   
 } 
 
 .container a:hover {
-  background-color: hsl(2, 69%, 49%);
-  color: white;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(2, 69%, 49%);
   transition: 0.3s;
 } 
 
@@ -67,7 +70,50 @@ html{
   color: hsl(2, 69%, 49%);
 }
 
+.whoami{
+  font-family: VT323;
+  color: hsl(2, 58%, 39%);
+  text-shadow: 3px 3px black;
+  font-size: 7rem;
+}
+.me h1{
+  text-align: left;
+}
 
+.me p {
+  text-align: right;
+  font-size: 1.2rem;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-right: 0;
+}
+
+#about-me{
+  background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/alex-perez-ioJBsYQ-pPM-unsplash.jpg') no-repeat center / cover;
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+.box img{
+  border-radius: 100%;
+  display: flex;
+  align-items: left;
+}
+
+.box{
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+}
+
+@font-face {
+  font-family: VT323;
+  src: url("./fonts/VT323.ttf");
+}
 
 @media only screen and (max-width:768px){
   html{
