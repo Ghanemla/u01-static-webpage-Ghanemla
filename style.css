@@ -1,27 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
-*{
+@import "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap";
+@-webkit-keyframes python-fill {
+  100% {
+    width: 75%;
+  }
+}
+@keyframes python-fill {
+  100% {
+    width: 75%;
+  }
+}
+@-webkit-keyframes linux-fill {
+  100% {
+    width: 85%;
+  }
+}
+@keyframes linux-fill {
+  100% {
+    width: 85%;
+  }
+}
+@-webkit-keyframes html-fill {
+  100% {
+    width: 75%;
+  }
+}
+@keyframes html-fill {
+  100% {
+    width: 75%;
+  }
+}
+@-webkit-keyframes css-fill {
+  100% {
+    width: 60%;
+  }
+}
+@keyframes css-fill {
+  100% {
+    width: 60%;
+  }
+}
+@font-face {
+  font-family: VT323;
+  src: url("./fonts/VT323.ttf");
+}
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html{
-  font-family: 'Roboto Mono';
+html {
+  font-family: "Roboto Mono";
   font-size: 18px;
   background-color: rgb(0, 0, 0);
 }
 
-
-
-#hero{
+#hero {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/andrew-neel-jtsW--Z6bFw-unsplash.jpg') no-repeat center / cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url("./images/andrew-neel-jtsW--Z6bFw-unsplash.jpg") no-repeat center/cover;
   color: white;
 }
 
-.container{
+.container {
   width: 90%;
   height: 100%;
   max-width: 1000px;
@@ -31,12 +72,10 @@ html{
   justify-content: center;
   text-align: right;
 }
-
 .container .info h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-
 .container .info h2 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -47,41 +86,36 @@ html{
   margin: 0 auto;
   margin-right: 0;
 }
-
 .container .info a {
   text-decoration: none;
   display: inline-block;
-  background-color: hsl(2, 69%, 49%);
+  background-color: hsl(2deg, 69%, 49%);
   border-radius: 4px;
-  font-size: 1rem; 
+  font-size: 1rem;
   padding: 0.5em 2em;
-  margin-top: 1rem; 
-  color:  hsl(0, 0%, 0%);
-  
-} 
-
+  margin-top: 1rem;
+  color: hsl(0deg, 0%, 0%);
+}
 .container a:hover {
-  background-color: hsl(0, 0%, 0%);
-  color: hsl(2, 69%, 49%);
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(2deg, 69%, 49%);
   transition: 0.3s;
-} 
-
-.red-txt{
-  color: hsl(2, 69%, 49%);
 }
 
+.red-txt {
+  color: hsl(2deg, 69%, 49%);
+}
 
-
-.whoami{
+.whoami {
   font-family: VT323;
-  color: hsl(2, 58%, 39%);
+  color: hsl(2deg, 58%, 39%);
   text-shadow: 3px 3px black;
   font-size: 7rem;
 }
-.me h1{
+
+.me h1 {
   text-align: left;
 }
-
 .me p {
   text-align: right;
   font-size: 1.2rem;
@@ -90,20 +124,14 @@ html{
   margin-right: 0;
 }
 
-#about-me{
-  background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/alex-perez-ioJBsYQ-pPM-unsplash.jpg') no-repeat center / cover;
+#about-me {
+  background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url("./images/alex-perez-ioJBsYQ-pPM-unsplash.jpg") no-repeat center/cover;
   height: 100vh;
   width: 100%;
   color: white;
 }
 
-.box img{
-  border-radius: 100%;
-  display: flex;
-  align-items: left;
-}
-
-.box{
+.box {
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -111,119 +139,99 @@ html{
   justify-content: center;
   text-align: right;
 }
+.box img {
+  border-radius: 100%;
+  display: flex;
+  align-items: left;
+}
 
-#skill-section{
+#skill-section {
   background-color: rgba(209, 207, 207, 0.699);
-  height: 50vh;
+  height: 100vh;
   width: 100%;
-  background-image: url('./images/ryan-stone-_4MkAq-Aycg-unsplash.jpg');
+  background-image: url("./images/ryan-stone-_4MkAq-Aycg-unsplash.jpg");
   color: white;
 }
 
-.wrapper{
+.wrapper {
   width: 40%;
   min-width: 570px;
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   top: 230%;
   left: 50%;
-  
 }
 
-.cont{
+.cont {
   width: 100%;
   padding: 30px 30px 50px;
   background-color: rgba(245, 245, 245, 0);
   border-radius: 25px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
-.cont *{
+.cont * {
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   font-weight: 500;
   color: whitesmoke;
 }
-
-.cont .red-txt{
-  color: hsl(2, 69%, 49%);
+.cont .red-txt {
+  color: hsl(2deg, 69%, 49%);
 }
-
-.cont h2{
+.cont h2 {
   margin-bottom: 50px;
   letter-spacing: 2px;
   text-align: center;
   font-size: 33px;
   font-weight: bold;
-  
 }
 
-.details{
+.details {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
-.bar{
+.bar {
   position: relative;
   border: 2px solid #050505;
   border-radius: 20px;
 }
-
-.bar div{
+.bar div {
   position: relative;
   width: 0;
   height: 9px;
   border-radius: 10px;
-  background-color:  hsl(2, 69%, 49%);
- 
+  background-color: hsl(2deg, 69%, 49%);
 }
 
-.skills:not(:last-child){
+.skills:not(:last-child) {
   margin-bottom: 20px;
 }
 
-#pythonbar{
-  animation: python-fill 2s forwards;
-}
-@keyframes python-fill{
-  100%{
-    width: 75%;
-  }
-}
-#linuxbar{
-  animation: linux-fill 2s forwards;
-}
-@keyframes linux-fill{
-  100%{
-    width: 85%;
-  }
-}
-#htmlbar{
-  animation: html-fill 2s forwards;
-}
-@keyframes html-fill{
-  100%{
-    width: 75%;
-  }
-}
-#cssbar{
-  animation: css-fill 2s forwards;
-}
-@keyframes css-fill{
-  100%{
-    width: 60%;
-  }
+#pythonbar {
+  -webkit-animation: python-fill 2s forwards;
+          animation: python-fill 2s forwards;
 }
 
-
-@font-face {
-  font-family: VT323;
-  src: url("./fonts/VT323.ttf");
+#linuxbar {
+  -webkit-animation: linux-fill 2s forwards;
+          animation: linux-fill 2s forwards;
 }
 
-@media only screen and (max-width:768px){
-  html{
-    font-size:10px;
+#htmlbar {
+  -webkit-animation: html-fill 2s forwards;
+          animation: html-fill 2s forwards;
+}
+
+#cssbar {
+  -webkit-animation: css-fill 2s forwards;
+          animation: css-fill 2s forwards;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
   }
-}
+}/*# sourceMappingURL=style.css.map */

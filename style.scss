@@ -1,0 +1,224 @@
+$color_1: white;
+$color_2: hsl(0, 0%, 0%);
+$color_3: hsl(2, 69%, 49%);
+$color_4: hsl(2, 58%, 39%);
+$color_5: black;
+$color_6: whitesmoke;
+$font-family_1: 'Roboto Mono';
+$font-family_2: VT323;
+$font-family_3: Arial, Helvetica, sans-serif;
+$background-color_1: rgb(0, 0, 0);
+$background-color_2: hsl(2, 69%, 49%);
+$background-color_3: hsl(0, 0%, 0%);
+$background-color_4: rgba(209, 207, 207, 0.699);
+$background-color_5: rgba(245, 245, 245, 0);
+
+@import "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap";
+
+@keyframes python-fill {
+	100% {
+		width: 75%;
+	}
+}
+
+@keyframes linux-fill {
+	100% {
+		width: 85%;
+	}
+}
+
+@keyframes html-fill {
+	100% {
+		width: 75%;
+	}
+}
+
+@keyframes css-fill {
+	100% {
+		width: 60%;
+	}
+}
+
+@font-face {
+	font-family: VT323;
+	src: url("./fonts/VT323.ttf");
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $font-family_1;
+	font-size: 18px;
+	background-color: $background-color_1;
+}
+#hero {
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/andrew-neel-jtsW--Z6bFw-unsplash.jpg') no-repeat center / cover;
+	color: $color_1;
+}
+.container {
+	width: 90%;
+	height: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: right;
+	.info {
+		h1 {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 2rem;
+		}
+		p {
+			font-size: 1.2rem;
+			max-width: 60%;
+			margin: 0 auto;
+			margin-right: 0;
+		}
+		a {
+			text-decoration: none;
+			display: inline-block;
+			background-color: $background-color_2;
+			border-radius: 4px;
+			font-size: 1rem;
+			padding: 0.5em 2em;
+			margin-top: 1rem;
+			color: $color_2;
+		}
+	}
+	a {
+		&:hover {
+			background-color: $background-color_3;
+			color: $color_3;
+			transition: 0.3s;
+		}
+	}
+}
+.red-txt {
+	color: $color_3;
+}
+.whoami {
+	font-family: $font-family_2;
+	color: $color_4;
+	text-shadow: 3px 3px black;
+	font-size: 7rem;
+}
+.me {
+	h1 {
+		text-align: left;
+	}
+	p {
+		text-align: right;
+		font-size: 1.2rem;
+		max-width: 60%;
+		margin: 0 auto;
+		margin-right: 0;
+	}
+}
+#about-me {
+	background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/alex-perez-ioJBsYQ-pPM-unsplash.jpg') no-repeat center / cover;
+	height: 100vh;
+	width: 100%;
+	color: $color_1;
+}
+.box {
+	img {
+		border-radius: 100%;
+		display: flex;
+		align-items: left;
+	}
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: right;
+}
+#skill-section {
+	background-color: $background-color_4;
+	height: 100vh;
+	width: 100%;
+	background-image: url('./images/ryan-stone-_4MkAq-Aycg-unsplash.jpg');
+	color: $color_1;
+}
+.wrapper {
+	width: 40%;
+	min-width: 570px;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 230%;
+	left: 50%;
+}
+.cont {
+	width: 100%;
+	padding: 30px 30px 50px;
+	background-color: $background-color_5;
+	border-radius: 25px;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+	* {
+		font-family: $font-family_3;
+		color: $color_5;
+		font-weight: 500;
+		color: $color_6;
+	}
+	.red-txt {
+		color: $color_3;
+	}
+	h2 {
+		margin-bottom: 50px;
+		letter-spacing: 2px;
+		text-align: center;
+		font-size: 33px;
+		font-weight: bold;
+	}
+}
+.details {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.bar {
+	position: relative;
+	border: 2px solid #050505;
+	border-radius: 20px;
+	div {
+		position: relative;
+		width: 0;
+		height: 9px;
+		border-radius: 10px;
+		background-color: $background-color_2;
+	}
+}
+.skills {
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+}
+#pythonbar {
+	animation: python-fill 2s forwards;
+}
+#linuxbar {
+	animation: linux-fill 2s forwards;
+}
+#htmlbar {
+	animation: html-fill 2s forwards;
+}
+#cssbar {
+	animation: css-fill 2s forwards;
+}
+@media only screen and (max-width:768px) {
+	html {
+		font-size: 10px;
+	}
+}
