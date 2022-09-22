@@ -49,12 +49,14 @@ $background-color_5: rgba(245, 245, 245, 0);
 	margin: 0;
 	box-sizing: border-box;
 	color: $color_1;
+
 }
 
 html {
 	font-family: $font-family_1;
 	font-size: 18px;
 	background-color: $background-color_1;
+	display: flex;
 }
 #hero {
 	height: 100vh;
@@ -92,8 +94,8 @@ html {
 			margin-right: 0;
 		}
 		a {
-			text-decoration: none;
 			display: inline-block;
+			text-decoration: none;
 			background-color: $background-color_2;
 			border-radius: 4px;
 			font-size: 1rem;
@@ -129,19 +131,20 @@ html {
 		max-width: 60%;
 		margin: 0 auto;
 		margin-right: 0;
+		position: sticky;
 	}
+
 }
 #about-me {
 	background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/redlines.jpg') no-repeat center / cover;
 	height: 100vh;
 	width: 100%;
 	color: $color_1;
+	padding: 10px;
 }
 .box {
 	img {
-		border-radius: 100%;
-		display: flex;
-		align-items: right;
+		border-radius: 15%;
 		
 	}
 	width: 95%;
@@ -149,32 +152,33 @@ html {
 	display: flex;
  	align-items: center;
 	justify-content: center;
-	text-align: right;
+	text-align: center;
 } 
 #skill-section {
 	background-color: $background-color_4;
-	height: 100vh;
+	height: 50vh;
 	width: 100%;
 	background-image: url('./images/red-woosh.jpg');
 	color: $color_1;
 }
 
-.video{
+.iframe{
 	display: flex;
 	justify-content: center;
-	position: absolute;
+	position: relative;
 	transform: translate(-50%,-50%);
-	top: 270%;
-	left: 50%;
+	top: 70vh;
+	left: 60%;
 	
 }
 .wrapper {
-	width: 40%;
+	width: 60%;
 	min-width: 570px;
 	position: absolute;
 	transform: translate(-50%,-50%);
 	top: 230%;
 	left: 50%;
+	margin-top: 10%;
 }
 .cont {
 	width: 100%;
@@ -182,6 +186,7 @@ html {
 	background-color: $background-color_5;
 	border-radius: 25px;
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+	
 	* {
 		font-family: $font-family_3;
 		color: $color_5;
@@ -209,6 +214,7 @@ html {
 	position: relative;
 	border: 2px solid #050505;
 	border-radius: 20px;
+	
 	div {
 		position: relative;
 		width: 0;
@@ -219,7 +225,7 @@ html {
 }
 .skills {
 	&:not(:last-child) {
-		margin-bottom: 20px;
+		margin-bottom: 20%;
 	}
 }
 #pythonbar {
@@ -234,7 +240,7 @@ html {
 #cssbar {
 	animation: css-fill 2s forwards;
 }
-@media only screen and (max-width:768px) {
+@media  (max-width:768px) {
 	html {
 		font-size: 10px;
 	}
