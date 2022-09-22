@@ -231,7 +231,7 @@ html {
 .box {
 	img {
 		border-radius: 15%;
-		
+		margin-right: 50px;
 	}
 	width: 95%;
 	margin: 0 auto;
@@ -239,6 +239,7 @@ html {
  	align-items: center;
 	justify-content: center;
 	text-align: center;
+
 } 
 #skill-section {
 	background-color: $background-color_4;
@@ -248,7 +249,7 @@ html {
 	color: $color_1;
 }
 
-.iframe{
+/* .video{
 	display: flex;
 	justify-content: center;
 	position: relative;
@@ -256,7 +257,9 @@ html {
 	top: 70vh;
 	left: 60%;
 	
-}
+} */
+
+
 .wrapper {
 	width: 60%;
 	min-width: 570px;
@@ -264,7 +267,7 @@ html {
 	transform: translate(-50%,-50%);
 	top: 230%;
 	left: 50%;
-	margin-top: 10%;
+/* 	margin-top: 10%; */
 }
 .cont {
 	width: 100%;
