@@ -64,6 +64,88 @@ html {
   color: white;
 }
 
+#menutoggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+#menutoggle a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 0%);
+  transition: color 0.3s ease;
+}
+#menutoggle a:hover {
+  color: hsl(2deg, 69%, 49%);
+}
+#menutoggle input {
+  display: block;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+#menutoggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: hsl(2deg, 69%, 49%);
+}
+#menutoggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menutoggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menutoggle input:checked ~ ul {
+  transform: none;
+}
+#menutoggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: hsl(2deg, 69%, 49%);
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+#menutoggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menutoggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menu {
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: rgb(0, 0, 0);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
 .table, th, td {
   font-size: 1rem;
   border: 2px solid hsl(2deg, 69%, 49%);
