@@ -214,6 +214,19 @@ html {
   position: -webkit-sticky;
   position: sticky;
 }
+.me .image {
+  display: flex;
+  justify-content: center;
+}
+.me .image img {
+  border-radius: 15%;
+}
+.me .iframe {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
 
 #about-me {
   background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url("./images/redlines.jpg") no-repeat center/cover;
@@ -223,19 +236,16 @@ html {
   padding: 10px;
 }
 
-.box {
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.box img {
-  border-radius: 15%;
-  margin-right: 50px;
-}
+/* .box {
 
+	width: 95%;
+	margin: 0 auto;
+  	display: flex;
+ 	align-items: center;
+	justify-content: center;
+	 text-align: center; 
+
+} */
 #skill-section {
   background-color: rgba(209, 207, 207, 0.699);
   height: 50vh;
@@ -244,15 +254,6 @@ html {
   color: white;
 }
 
-/* .video{
-	display: flex;
-	justify-content: center;
-	position: relative;
-	transform: translate(-50%,-50%);
-	top: 70vh;
-	left: 60%;
-
-} */
 .wrapper {
   width: 60%;
   min-width: 570px;
