@@ -57,13 +57,38 @@ html {
 	font-size: 18px;
 	background-color: $background-color_1;
 	display: flex;
+	overflow-x: hidden;
+	
+	// here starts scroll bar style (just for fun)
+	::-webkit-scrollbar{
+		width: 10px;
+		
+	}
+	
+	::-webkit-scrollbar-track{
+		box-shadow: inset 0 0 5px grey;
+		border-radius: 10px;
+		}
+	::-webkit-scrollbar-thumb{
+		background-color: $background-color_2;
+		border-radius: 10px;
+	}
+	::-webkit-scrollbar-thumb:hover{
+		background: $color_4;
+		}
+// here ends scrollbar style
 }
+//here is starts hero section style
 #hero {
 	height: 100vh;
 	width: 100%;
 	background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/black-leaves.jpg') no-repeat center / cover;
 	color: $color_1;
 }
+//here is ends hero section style
+
+	
+
 // here starts the hamburger menu 
 #menutoggle{
 	display: block;
@@ -133,6 +158,7 @@ html {
 
 }
 
+
 #menu{
 	position: absolute;
 	width: 200px;
@@ -150,11 +176,14 @@ html {
 		font-size: 22px;
 	}
 }
-// here ends the burger menu
+// here ends the burger menu style
+
+//table style cause i needed it
 .table, th, td{
 	font-size: 1rem;
 	border: 2px solid $color_3;
 }
+
 .container {
 	width: 90%;
 	height: 100%;
@@ -198,9 +227,12 @@ html {
 		}
 	}
 }
+//style for the red part in the text
 .red-txt {
 	color: $color_3;
 }
+
+//about me section style
 .whoami {
 	font-family: $font-family_2;
 	color: $color_4;
@@ -212,12 +244,9 @@ html {
 		text-align: left;
 	}
 	p {
-		text-align: right;
-		font-size: 1.2rem;
-		max-width: 60%;
-		margin: 0 auto;
-		margin-right: 0;
-		position: sticky;
+ 		text-align: right;
+		font-size: 1rem;
+		max-width: 500%;
 	}
 
 	.image {
@@ -243,28 +272,24 @@ html {
 	width: 100%;
 	color: $color_1;
 	padding: 10px;
+	
+	
 }
-/* .box {
 
-	width: 95%;
-	margin: 0 auto;
-  	display: flex;
- 	align-items: center;
-	justify-content: center;
-	 text-align: center; 
- 
-} */ 
+//skills section starts here
 #skill-section {
 	background-color: $background-color_4;
 	height: 50vh;
 	width: 100%;
 	background-image: url('./images/red-woosh.jpg');
 	color: $color_1;
+	
+	
 }
 
 
 
-
+// skills animation bars
 .wrapper {
 	width: 60%;
 	min-width: 570px;
@@ -272,6 +297,7 @@ html {
 	transform: translate(-50%,-50%);
 	top: 230%;
 	left: 50%;
+	
 /* 	margin-top: 10%; */
 }
 .cont {
@@ -280,6 +306,8 @@ html {
 	background-color: $background-color_5;
 	border-radius: 25px;
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+	top: 230%;
+	left: 50%;
 	
 	* {
 		font-family: $font-family_3;
@@ -291,7 +319,7 @@ html {
 		color: $color_3;
 	}
 	h2 {
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 		letter-spacing: 2px;
 		text-align: center;
 		font-size: 33px;
@@ -315,6 +343,7 @@ html {
 		height: 9px;
 		border-radius: 10px;
 		background-color: $background-color_2;
+		
 	}
 }
 .skills {
@@ -334,8 +363,10 @@ html {
 #cssbar {
 	animation: css-fill 2s forwards;
 }
-@media  (max-width:768px) {
+
+//media query
+@media  only screen and  (max-width:800px) {
 	html {
-		font-size: 10px;
+		font-size: 16px;
 	}
 }
