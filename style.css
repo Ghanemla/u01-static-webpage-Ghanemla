@@ -215,8 +215,12 @@ html ::-webkit-scrollbar-thumb:hover {
   color: hsl(2deg, 58%, 39%);
   text-shadow: 3px 3px black;
   font-size: 7rem;
+  margin-left: 1.8rem;
 }
 
+.me {
+  margin-left: 1.8rem;
+}
 .me h1 {
   text-align: left;
 }
