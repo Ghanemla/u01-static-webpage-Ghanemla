@@ -251,7 +251,7 @@ html ::-webkit-scrollbar-thumb:hover {
   padding: 10px;
 }
 
-#skills {
+#skill-section {
   background-color: rgba(209, 207, 207, 0.699);
   height: 50vh;
   width: 100%;
