@@ -92,7 +92,7 @@ html ::-webkit-scrollbar-thumb:hover {
 }
 #menutoggle a {
   text-decoration: none;
-  color: hsl(0deg, 0%, 0%);
+  color: white;
   transition: color 0.3s ease;
 }
 #menutoggle a:hover {
@@ -161,7 +161,7 @@ html ::-webkit-scrollbar-thumb:hover {
   font-size: 22px;
 }
 
-.table, th, td {
+table, th, td, tr {
   font-size: 1rem;
   border: 2px solid hsl(2deg, 69%, 49%);
 }
@@ -264,7 +264,7 @@ html ::-webkit-scrollbar-thumb:hover {
   min-width: 570px;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 230%;
+  /* 	top: 230%; */
   left: 50%;
   /* 	margin-top: 10%; */
 }
@@ -273,6 +273,7 @@ html ::-webkit-scrollbar-thumb:hover {
   width: 100%;
   padding: 30px 30px 50px;
   background-color: rgba(245, 245, 245, 0);
+  background-image: url("./images/red-woosh.jpg");
   border-radius: 25px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
   top: 230%;

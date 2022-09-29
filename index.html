@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="SV">
 <head>
-  <meta charset="utf8">
+  <meta charset="utf-8">
   <title>Ghanem's Portfolio site</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <!-- ?\here starts hero section -->
 <body>
-  <nav role="navigation">
+  <nav>
     <div id="menutoggle">
-      <input type="checkbox"/>
+      <input type="checkbox">
       <ul id="menu">
-        <a href="#hero"><li>Home</li></a>
-        <a href="#about-me"><li>About</li></a>
-        <a href="#skill-section"><li>Skills</li></a>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#skill">Skills</a></li>
       </ul>
       <span></span>
       <span></span>
@@ -25,15 +25,18 @@
   <section id="hero">
     <div class="container">
       <div class="table">
-        <table>
-          <th></th>
-          <th>Sun</th>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-          <th>Sat</th>
+          <table>
+          <tbody></tbody>
+          <tr>
+          <td></td>
+          <td>Sun</td>
+          <td>Mon</td>
+          <td>Tue</td>
+          <td>Wed</td>
+          <td>Thu</td>
+          <td>Fri</td>
+          <td>Sat</td>
+          </tr>
           <tr>
             <td>Available</td>
             <td></td>
@@ -59,8 +62,8 @@
       <div class="info">
         <h1>I am <span class="red-txt">Ghanem</span></h1>
         <h2>I'm a <span class="red-txt">Fullstack Developer</span> student </h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-          Quod harum temporibus molestias ipsa totam assumenda! 
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Quod harum temporibus molestias ipsa totam assumenda!
           Illum nisi quod dolorem reprehenderit.</p>
         <a href="#">
           <img src="./images/download.svg" alt=""
@@ -71,29 +74,28 @@
     </div>
   </section>
 <!-- here ends hero section -->
-  <br/>
+  <br>
 
   <!-- here starts about me section -->
   <section id="about-me">
     <div class="box">
-              
-      <div class="me"> 
-        <div class="image">       
-          <img src="./images/me-in-chair.jpg" alt="" height="300"/>
+      <div class="me">
+        <div class="image">
+          <img src="./images/me-in-chair.jpg" alt="" height="300">
         </div>
         <div class="iframe">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/u0OeZfIfBRI" frameborder="10" allowfullscreen></iframe> 
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/u0OeZfIfBRI"  allowfullscreen title="What is HTML"></iframe>
         </div>
-        
         <h1><span class="whoami">Whoami?</span></h1>
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           Laborum reiciendis numquam quibusdam consequuntur a assumenda molestiae dolore nulla illum quos
-          deserunt porro ex dolor cumque laboriosam asperiores ipsum iusto repellendus, ab voluptates aperiam 
-          cupiditate fuga. Facilis ab neque minus quasi doloribus, totam, 
+          deserunt porro ex dolor cumque laboriosam asperiores ipsum iusto repellendus, ab voluptates aperiam
+          cupiditate fuga. Facilis ab neque minus quasi doloribus, totam,
           velit laboriosam possimus fugiat blanditiis sit impedit ipsum.
         </p>
-        <div class="cont">
-          <h2>My <span class="red-txt">Skills</span></h2>
+        <!--here starts skills section-->
+        <div class="cont" id="skill">
+          <h2 >My <span class="red-txt">Skills</span></h2>
           <div class="skills">
             <div class="details">
               <span>Python</span>
@@ -102,7 +104,6 @@
             <div class="bar">
               <div id="pythonbar"></div>
             </div>
-  
             <div class="details">
               <span>Linux</span>
               <span>85%</span>
@@ -110,8 +111,6 @@
             <div class="bar">
               <div id="linuxbar"></div>
             </div>
-  
-  
             <div class="details">
               <span>HTML</span>
               <span>75%</span>
@@ -119,12 +118,11 @@
             <div class="bar">
               <div id="htmlbar"></div>
             </div>
-  
+
             <div class="details">
               <span>CSS</span>
               <span>60%</span>
             </div>
-  
             <div class="bar">
               <div id="cssbar"></div>
             </div>
@@ -134,18 +132,15 @@
     </div>
   </section>
 <!-- here ends about me section -->
-  <br/>
+  <br>
   <!-- here starts my skills section -->
 
-  <section id="skill-section">
+<!--   <section id="skill-section">
     <div class="wrapper">
 
 
     </div>
-    <br/>
-
-
-  </section>
+  </section> -->
   <!-- here ends skills section -->
 </body>
 </html>

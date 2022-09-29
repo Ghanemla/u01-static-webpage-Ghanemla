@@ -101,7 +101,7 @@ html {
 
 	a{
 		text-decoration: none;
-		color: $color_2;
+		color: $color_1;
 		transition: color 0.3s ease;
 		&:hover{
 			color: $color_3;
@@ -179,7 +179,7 @@ html {
 // here ends the burger menu style
 
 //table style cause i needed it
-.table, th, td{
+table, th, td, tr {
 	font-size: 1rem;
 	border: 2px solid $color_3;
 	
@@ -297,7 +297,7 @@ html {
 	min-width: 570px;
 	position: absolute;
 	transform: translate(-50%,-50%);
-	top: 230%;
+/* 	top: 230%; */
 	left: 50%;
 	
 /* 	margin-top: 10%; */
@@ -306,6 +306,7 @@ html {
 	width: 100%;
 	padding: 30px 30px 50px;
 	background-color: $background-color_5;
+	background-image: url('./images/red-woosh.jpg');
 	border-radius: 25px;
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 	top: 230%;
