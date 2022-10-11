@@ -1,150 +1,107 @@
 <!DOCTYPE html>
-<html lang="SV">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghanem's Portfolio site</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="style.css">
+  <title>portfolio</title>
 </head>
-
-<!-- ?\here starts hero section -->
-
 <body>
-  <nav>
-    <div id="menutoggle">
-      <input type="checkbox">
-      <ul id="menu">
+  <!-- here starts nav bar section -->
+  <header>
+    <nav>
+      <img src="./img/logo_t.png" alt="my logo" class="logo">
+      <ul>
         <li><a href="#hero">Home</a></li>
-        <li><a href="#about-me">About</a></li>
-        <li><a href="#skill">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#table">Available</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
-      <span></span>
-      <span></span>
-      <span></span>
+    </nav>
+  </header>
+  <!-- here starts hero section -->
+  <div class="hero" id="hero">
+    <div class="hero_text">
+      <h3>Hi, My name is</h3>
+      <h1><span class="name">Ghanem</span> <span class="surname">Lamloumi</span></h1>
     </div>
-  </nav>
-
-  <section id="hero">
-    <div class="container">
-      <div class="table">
-        <table>
-          <tbody></tbody>
-          <tr>
-            <td></td>
-            <td>Sun</td>
-            <td>Mon</td>
-            <td>Tue</td>
-            <td>Wed</td>
-            <td>Thu</td>
-            <td>Fri</td>
-            <td>Sat</td>
-          </tr>
-          <tr>
-            <td>Available</td>
-            <td></td>
-            <td>&#9898;</td>
-            <td>&#9898;</td>
-            <td></td>
-            <td>&#9898;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Unavailable</td>
-            <td>&#10060;</td>
-            <td></td>
-            <td></td>
-            <td>&#10060;</td>
-            <td></td>
-            <td>&#10060;</td>
-            <td>&#10060;</td>
-          </tr>
-        </table>
-      </div>
-      <div class="info">
-        <h1>I am <span class="red-txt">Ghanem</span></h1>
-        <h2>I'm a <span class="red-txt">Fullstack Developer</span> student </h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Quod harum temporibus molestias ipsa totam assumenda!
-          Illum nisi quod dolorem reprehenderit.</p>
-        <a href="#">
-          <img src="./images/download.svg" alt="" width="30" height="30">
-          Download my Resume
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- here ends hero section -->
-  <br>
-
-  <!-- here starts about me section -->
-  <section id="about-me">
-    <div class="box">
-      <div class="me">
-        <div class="image">
-          <img src="./images/me-in-chair.jpg" alt="" height="300">
-        </div>
-        <div class="iframe">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/u0OeZfIfBRI" allowfullscreen
-            title="What is HTML"></iframe>
-        </div>
-        <h1><span class="whoami">Whoami?</span></h1>
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Laborum reiciendis numquam quibusdam consequuntur a assumenda molestiae dolore nulla illum quos
-          deserunt porro ex dolor cumque laboriosam asperiores ipsum iusto repellendus, ab voluptates aperiam
-          cupiditate fuga. Facilis ab neque minus quasi doloribus, totam,
-          velit laboriosam possimus fugiat blanditiis sit impedit ipsum.
+  </div>
+  <!-- Here starts about me section -->
+  <section class="about" id="about">
+    <div class="main">
+      <img src="./img/IMG_1045.JPG" alt="picture of me whith a my hamster">
+      <div class="about_text">
+        <h2>About <span class="name">Me</span></h2>
+        <h5><span class="surname">Fullstack-Dev</span> <span class="name">Student</span></h5>
+        <p>orem ipsum dolor sit amet consectetur adipisicing elit.
+          Molestiae veritatis voluptas temporibus illum. Reiciendis, ipsam? Expedita officia quas optio,
+          ullam, nemo cum consequuntur non dolor facilis fugiat sequi dicta eaque?
         </p>
-        <!--here starts skills section-->
-        <div class="cont" id="skill">
-          <h2>My <span class="red-txt">Skills</span></h2>
-          <div class="skills">
-            <div class="details">
-              <span>Python</span>
-              <span>75%</span>
-            </div>
-            <div class="bar">
-              <div id="pythonbar"></div>
-            </div>
-            <div class="details">
-              <span>Linux</span>
-              <span>85%</span>
-            </div>
-            <div class="bar">
-              <div id="linuxbar"></div>
-            </div>
-            <div class="details">
-              <span>HTML</span>
-              <span>75%</span>
-            </div>
-            <div class="bar">
-              <div id="htmlbar"></div>
-            </div>
-
-            <div class="details">
-              <span>CSS</span>
-              <span>60%</span>
-            </div>
-            <div class="bar">
-              <div id="cssbar"></div>
-            </div>
-          </div>
+        <button type="button" > Check Out My Resume!</button>
+        <div>
+          <video src="./img/IMG_1193.MOV" height="200" controls ></video>
         </div>
       </div>
     </div>
   </section>
-  <!-- here ends about me section -->
-  <br>
-  <!-- here starts my skills section -->
-
-  <!--   <section id="skill-section">
-    <div class="wrapper">
-
-
+  <!-- here is availability table section cause i needed a table?-->
+  <table>
+    <caption id="table">Days i'm available</caption>
+    <thead>
+      <tr>
+        <th scope="col">available</th>
+        <th scope="col">Unavailable</th>
+        <th scope="col">Day</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Available">&#x2713;</td>
+        <td data-label="Unavailable"></td>
+        <td data-label="Day">Monday</td>
+      </tr>
+      <tr>
+        <td  data-label="Available">&#x2713;</td>
+        <td data-label="Unavailable"></td>
+        <td data-label="Day">Tuesday</td>
+      </tr>
+      <tr>
+        <td  data-label="Available"></td>
+        <td data-label="Unavailable">&#x2717;</td>
+        <td data-label="Day">Wednesday</td>
+      </tr>
+      <tr>
+        <td  data-label="Available">&#x2713;</td>
+        <td data-label="Unavailable"></td>
+        <td data-label="Day">Thursday</td>
+      </tr>
+      <tr>
+        <td  data-label="Available"></td>
+        <td data-label="Unavailable">&#x2717;</td>
+        <td data-label="Day">Friday</td>
+      </tr>
+      <tr>
+        <td  data-label="Available"></td>
+        <td data-label="Unavailable">&#x2717;</td>
+        <td data-label="Day">Saturday</td>
+      </tr>
+      <tr>
+        <td  data-label="Available"></td>
+        <td data-label="Unavailable">&#x2717;</td>
+        <td data-label="Day">Sunday</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- contact me section  -->
+  <footer id="contact">
+    <p>Contact Me!</p>
+    <p>More ways to Contact me!</p>
+    <div class="social" id="social">
+      <a href="https://github.com/Ghanemla"><i class="fa-brands fa-github"></i>.</a>
+      <a href="https://www.linkedin.com/in/ghanem-lamloumi/"><i class="fa-brands fa-linkedin"></i>.</a>
+      <a href="https://www.instagram.com/halloumi_lamloumi/"><i class="fa-brands fa-instagram"></i>.</a>
     </div>
-  </section> -->
-  <!-- here ends skills section -->
+   </footer>
 </body>
-
 </html>

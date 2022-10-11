@@ -1,66 +1,25 @@
-$color_1: white;
-$color_2: hsl(0, 0%, 0%);
-$color_3: hsl(2, 69%, 49%);
-$color_4: hsl(2, 58%, 39%);
-$color_5: black;
-$color_6: whitesmoke;
-$font-family_1: 'Roboto Mono';
-$font-family_2: VT323;
-$font-family_3: Arial, Helvetica, sans-serif;
-$background-color_1: rgb(0, 0, 0);
-$background-color_2: hsl(2, 69%, 49%);
-$background-color_3: hsl(0, 0%, 0%);
-$background-color_4: rgba(209, 207, 207, 0.699);
-$background-color_5: rgba(245, 245, 245, 0);
+$hero-h:50vh;
+$clr-text:#f1f5f6;
+$clr-htext: hsl(270, 6%, 75%);
+$clr-accent:hsl(0, 0%, 26%); 
+ $clr-extra1: hsl(260, 7%, 18%); 
+$clr-primary: hsl(350, 69%, 46%);
 
-@import "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-@keyframes python-fill {
-	100% {
-		width: 75%;
-	}
+/* linear-gradient(to bottom right, #f3f9a6 0%, #cbc634 100%)
+
+linear-gradient(to bottom right, #ff616d 0%, #ffc171 100%
+
+linear-gradient(to bottom right, #58ac30 0%, #a7df62 100%);
+*/
+*{
+  font-family: 'Poppins', sans-serif;
 }
 
-@keyframes linux-fill {
-	100% {
-		width: 85%;
-	}
-}
-
-@keyframes html-fill {
-	100% {
-		width: 75%;
-	}
-}
-
-@keyframes css-fill {
-	100% {
-		width: 60%;
-	}
-}
-
-@font-face {
-	font-family: VT323;
-	src: url("./fonts/VT323.ttf");
-}
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	color: $color_1;
-
-}
-
-html {
-	font-family: $font-family_1;
-	font-size: 18px;
-	background-color: $background-color_1;
-	display: flex;
-	overflow-x: hidden;
-	
-	// here starts scroll bar style (just for fun)
-	::-webkit-scrollbar{
+html{
+  background-color: $clr-accent;
+  ::-webkit-scrollbar{
 		width: 10px;
 		
 	}
@@ -70,306 +29,273 @@ html {
 		border-radius: 10px;
 		}
 	::-webkit-scrollbar-thumb{
-		background-color: $background-color_2;
+		background-color: $clr-primary;
 		border-radius: 10px;
 	}
 	::-webkit-scrollbar-thumb:hover{
-		background: $color_4;
+		background: $clr-primary;
 		}
-// here ends scrollbar style
 }
-//here is starts hero section style
-#hero {
-	height: 100vh;
-	width: 100%;
-	background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/black-leaves.jpg') no-repeat center / cover;
-	color: $color_1;
-}
-//here is ends hero section style
-
-	
-
-// here starts the hamburger menu 
-#menutoggle{
-	display: block;
-	position: relative;
-	top: 50px;
-	left: 50px;
-	z-index: 1;
-	-webkit-user-select: none;
-	user-select: none;
-
-	a{
-		text-decoration: none;
-		color: $color_1;
-		transition: color 0.3s ease;
-		&:hover{
-			color: $color_3;
-		}
-	}
-
-	input{
-		display: block;
-		width: 20px;
-		height: 30px;
-		position: absolute;
-		top: -7px;
-		left:-5px;
-		cursor: pointer;
-		opacity: 0;
-		z-index: 2;
-		&:checked ~ span {
-			opacity: 1;
-			transform: rotate(45deg) translate(-2px, -1px);
-			background: $background-color_2;
-		}
-		&:checked ~ span:nth-last-child(3){
-			opacity: 0;
-			transform: rotate(0deg) scale(0.2, 0.2);
-		}
-		&:checked ~ span:nth-last-child(2){
-			transform: rotate(-45deg) translate(0, -1px);
-		}
-		&:checked ~ ul {
-			transform: none;
-		}
-	}
-
-	span{
-		display: block;
-		width: 33px;
-		height: 4px;
-		margin-bottom: 5px;
-		position: relative;
-		background: $background-color_2;
-		border-radius: 3px;
-		z-index: 1;
-		transform-origin: 4px 0px;
-		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), 
-		background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-		&:first-child{
-			transform-origin: 0% 0%;
-		}
-
-		&:nth-last-child(2){
-			transform-origin: 0% 100%;
-		}
-	}
+/* hero section */
+.hero{
+ height: $hero-h;
+  background: url(./img/pexels-pedro-figueras-681467.jpg);
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  .hero_text{
+    color: $clr-text;
+    margin-right: 3%;
+  }
 
 }
 
-
-#menu{
-	position: absolute;
-	width: 200px;
-	margin: -100px 0 0 -50px;
-	padding: 50px;
-	padding-top: 125px;
-	background: $background-color_1;
-	list-style-type: none;
-	-webkit-font-smoothing: antialiased;
-	transform-origin: 0% 0%;
-	transform: translate(-100%, 0);
-	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-	li{
-		padding: 10px 0;
-		font-size: 22px;
-	}
+.logo{ max-width: 100px;
 }
-// here ends the burger menu style
-
-//table style cause i needed it
-table, th, td, tr {
-	font-size: 1rem;
-	border: 2px solid $color_3;
-	
-}
-
-.container {
-	width: 90%;
-	height: 100%;
-	max-width: 1000px;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: right;
-	.info {
-		h1 {
-			font-size: 3rem;
-			margin-bottom: 1rem;
-		}
-		h2 {
-			font-size: 1.5rem;
-			margin-bottom: 2rem;
-		}
-		p {
-			font-size: 1.2rem;
-			max-width: 60%;
-			margin: 0 auto;
-			margin-right: 0;
-		}
-		a {
-			display: inline-block;
-			text-decoration: none;
-			background-color: $background-color_2;
-			border-radius: 4px;
-			font-size: 1rem;
-			padding: 0.5em 2em;
-			margin-top: 1rem;
-			color: $color_2;
-		}
-	}
-	a {
-		&:hover {
-			background-color: $background-color_3;
-			color: $color_3;
-			transition: 0.3s;
-		}
-	}
-}
-//style for the red part in the text
-.red-txt {
-	color: $color_3;
+/* nav bar */
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4em;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: $clr-primary;
+  position: sticky;
+  ul{
+    li{
+      list-style: none;
+      display: inline-block;
+      padding: 10px 15px;
+      a{
+        color: $clr-text;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: capitalize;
+        &:hover{
+          color: $clr-accent;
+          transition: .5s;
+        }
+      
+      }
+    }
+  }
 }
 
-//about me section style
-.whoami {
-	font-family: $font-family_2;
-	color: $color_4;
-	text-shadow: 3px 3px black;
-	font-size: 7rem;
-	margin-left: 1.8rem;
-}
-.me {
-	margin-left: 1.8rem;
-	h1 {
-		text-align: left;
-		
-	}
-	p {
- 		text-align: right;
-		font-size: 1rem;
-		max-width: 500%;
-	}
-
-	.image {
-		img{
-			border-radius: 15%;
-			
-		}
+/* media querry for the span text */
+@media only screen and (max-width:320px) {
+  .surname{
+    color: $clr-htext;
+    
+  }
+  .name{
+    color: $clr-primary;
+  }
   
-		display: flex;
-		justify-content: center;
-	}
-
-	.iframe{
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
-		margin-bottom: 40px;
-	}
 }
-#about-me {
-	background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.342)), url('./images/redlines.jpg') no-repeat center / cover;
-	height: 100vh;
-	width: 100%;
-	color: $color_1;
-	padding: 10px;	
+@media only screen and (min-width:321px) {
+  .name{
+    color: $clr-htext;
+  }
+  .surname{
+    color: $clr-primary;
+  }
 }
 
-//skills section starts here
-#skill-section {
-	background-color: $background-color_4;
-	height: 50vh;
-	width: 100%;
-	background-image: url('./images/red-woosh.jpg');
-	color: $color_1;
-	
-	
+/* about me section */
+.about{
+  width: 100%;
+  padding: 100px 0px;
+  background-color: $clr-accent;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+    
+  img{
+    width: 25vw;
+    height: auto;
+    border-radius: 25px;
+    margin-left: 5%;
+    margin-right: 2%;
+  }
+
+  .about_text{
+    width: 50%;
+    h2{
+      font-size: 1.8em;
+    }
+
+  }
+  .main{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  button{
+    background-color: $clr-primary;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 25px;
+    transition: .5s;
+    &:hover{
+      background-color: transparent;
+      border: 2px solid $clr-primary;
+      cursor: pointer;
+      color: $clr-primary;
+    }
+
+  }
+}
+
+video{
+  width: 100%;
+  max-width: 100%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
 }
 
 
 
-// skills animation bars
-.wrapper {
-	width: 60%;
-	min-width: 570px;
-	position: absolute;
-	transform: translate(-50%,-50%);
-/* 	top: 230%; */
-	left: 50%;
-	
-/* 	margin-top: 10%; */
+table {
+  border: 1px solid $clr-primary;
+  border-collapse: collapse;
+  margin: 0;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  padding: 0;
+  width: 90%;
+  table-layout: fixed;
+  caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+  background:  linear-gradient(to right, $clr-accent , $clr-text);
+
+  }
+  tr {
+    background-color: $clr-accent;
+    border: 1px solid $clr-accent;
+    padding: .35em;
+    transition: all .2s ease-in;
+      cursor: pointer;
+      &:hover{
+        background-color: $clr-primary;
+        transform: scale(1.02);
+        box-shadow: 2px 2px 12px rgba(0,0,0,.2), -1px -1px 8px rgba(0,0,0,.2);
+        color: $clr-accent;
+      }
+  }
+ th, td {
+  padding: .625em;
+  text-align: center;
 }
-.cont {
-	width: 100%;
-	padding: 30px 30px 50px;
-	background-color: $background-color_5;
-	background-image: url('./images/red-woosh.jpg');
-	border-radius: 25px;
-	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-	top: 230%;
-	left: 50%;
-	
-	* {
-		font-family: $font-family_3;
-		color: $color_5;
-		font-weight: 500;
-		color: $color_6;
-	}
-	.red-txt {
-		color: $color_3;
-	}
-	h2 {
-		margin-bottom: 20px;
-		letter-spacing: 2px;
-		text-align: center;
-		font-size: 33px;
-		font-weight: bold;
-	}
+th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
-.details {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 10px;
-}
-.bar {
-	position: relative;
-	border: 2px solid #050505;
-	border-radius: 20px;
-	
-	div {
-		position: relative;
-		width: 0;
-		height: 9px;
-		border-radius: 10px;
-		background-color: $background-color_2;
-		
-	}
-}
-.skills {
-	&:not(:last-child) {
-		margin-bottom: 20%;
-	}
-}
-#pythonbar {
-	animation: python-fill 2s forwards;
-}
-#linuxbar {
-	animation: linux-fill 2s forwards;
-}
-#htmlbar {
-	animation: html-fill 2s forwards;
-}
-#cssbar {
-	animation: css-fill 2s forwards;
 }
 
-//media query
-@media  only screen and  (max-width:800px) {
-	html {
-		font-size: 16px;
-	}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0); 
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid $clr-accent;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid $clr-primary;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+
+footer{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #101010;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $clr-text;
+  p:nth-child(1){
+    font-size: 30px;
+    margin-bottom:20px ;
+    font-weight: bold;
+    &:nth-child(2){
+      color: $clr-text;
+      font-size: 17px;
+      width: 500px;
+      text-align: center;
+      line-height: 26px;
+    }
+  }
+  
+  .social{
+    display: flex;
+    a{
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $clr-primary;
+      border-radius: 50%;
+      margin: 22px 10px;
+      color: $clr-extra1;
+      text-decoration: none;
+      font-size: 20px;
+      margin-right: 20px;
+
+      &:hover{
+        transform: scale(1.3);
+        transition: .5s;
+      }
+    }
+  }
 }
