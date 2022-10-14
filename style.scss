@@ -122,11 +122,17 @@ nav{
   }
 
   .about_text{
-    width: 50%;
+
     h2{
       font-size: 1.8em;
     }
+    h5{
+      font-size: 2em;
+    }
 
+    p{
+      font-size: 1em;
+    }
   }
   .main{
     width: 100%;
@@ -157,7 +163,7 @@ nav{
 
 iframe{
   width: 50%;
-  height: 50vh;
+  height: auto;
   max-width: 100%;
   margin: 10px auto;
   display: flex;

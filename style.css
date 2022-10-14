@@ -107,11 +107,14 @@ nav ul li a:hover {
   margin-left: 5%;
   margin-right: 2%;
 }
-.about .about_text {
-  width: 50%;
-}
 .about .about_text h2 {
   font-size: 1.8em;
+}
+.about .about_text h5 {
+  font-size: 2em;
+}
+.about .about_text p {
+  font-size: 1em;
 }
 .about .main {
   width: 100%;
@@ -139,7 +142,7 @@ nav ul li a:hover {
 
 iframe {
   width: 50%;
-  height: 50vh;
+  height: auto;
   max-width: 100%;
   margin: 10px auto;
   display: flex;
