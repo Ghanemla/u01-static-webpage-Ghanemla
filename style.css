@@ -137,8 +137,9 @@ nav ul li a:hover {
   color: hsl(350deg, 69%, 46%);
 }
 
-video {
-  width: 100%;
+iframe {
+  width: 50%;
+  height: 50vh;
   max-width: 100%;
   margin: 10px auto;
   display: flex;
